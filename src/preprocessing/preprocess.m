@@ -1,21 +1,21 @@
 %Preprocessing applied to the leaflet image in order to obtain the damage contour
-%	preprocess_leaflets(input_folder) saves contours of input images and the damage contours
-%		input_folder -- folder with orginal leaflet images
-%	
-%		save the contours of the leaflet in folder ../../data/coutours/
-%		save the contours of the damages in folder ../../data/cuts/
+%   preprocess_leaflets(input_folder) saves contours of input images and the damage contours
+%       input_folder -- folder with orginal leaflet images
+%   
+%       save the contours of the leaflet in folder ../../data/coutours/
+%       save the contours of the damages in folder ../../data/cuts/
 %
 %Authors:
-% 	Suellen Almeida <susilvaalmeida@gmail.com>
-% 	Antonio Carlos N. Junior <acnazarejr@gmail.com>
-% 	Thiago L. G. Souza (in memoriam)
+%   Suellen Almeida <susilvaalmeida@gmail.com>
+%   Antonio Carlos N. Junior <acnazarejr@gmail.com>
+%   Thiago L. G. Souza (in memoriam)
 
 function preprocess_leaflets(input_folder)
-	% get all bmp images of input_folder
-	images = dir([input_folder '*.bmp']);
-	N = length(images)
+    % get all bmp images of input_folder
+    images = dir([input_folder '*.bmp']);
+    N = length(images)
 
-	% check images
+    % check images
     %if(~exist(input_folder, 'dir') || N<1)
     %    display('Directory not found or no matching images found.');
 
@@ -23,8 +23,8 @@ function preprocess_leaflets(input_folder)
     mkdir('../../data/contours');
     mkdir('../../data/cuts');
     
-	for i = 1:N
-		i
+    for i = 1:N
+        i
         img = imread([input_folder images(i).name]);
 
         %filter image and find damages
@@ -47,5 +47,5 @@ function preprocess_leaflets(input_folder)
                 imwrite(damage,output_cut);  
             end             
         end
-	end
+    end
 end 

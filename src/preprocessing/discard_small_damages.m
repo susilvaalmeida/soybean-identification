@@ -8,18 +8,18 @@
 %   Thiago L. G. Souza (in memoriam)
 
 function output_img = discard_small_damages(bw_img)
-	[r c] = size(bw_img);
-	total_size = r*c;
+    [r c] = size(bw_img);
+    total_size = r*c;
 
-	output_img = bw_img;
-	bw_img = 1-bw_img;
-	
-	[labels, num] = bwlabel(bw_img);
-	for i = 1:(num)
-	    perc = length(find(labels == i))/total_size;
-	    
-	    if(perc < 0.0002)
-	        output_img(labels==i) = 255;
-	    end
-	end   
+    output_img = bw_img;
+    bw_img = 1-bw_img;
+    
+    [labels, num] = bwlabel(bw_img);
+    for i = 1:(num)
+        perc = length(find(labels == i))/total_size;
+        
+        if(perc < 0.0002)
+            output_img(labels==i) = 255;
+        end
+    end   
 end 

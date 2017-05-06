@@ -40,10 +40,10 @@ function descriptors = wavelet_descriptors(damage_img,wv_family,N,percent_N)
     N_z = length(z_descriptors);
     real_N = round(N*percent_N);
     if(N_z<real_N)
-    	descriptors = z_descriptors;
+        descriptors = z_descriptors;
         descriptors(N_z+1:real_N) = zeros(1,real_N-N_z);
-   	else
-   		descriptors = mt(1:real_N);
+    else
+        descriptors = mt(1:real_N);
     end
     descriptors = descriptors/max(descriptors);
 end

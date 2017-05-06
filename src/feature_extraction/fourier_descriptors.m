@@ -42,9 +42,9 @@ function descriptors = fourier_descriptors(damage_img,N)
 
     N_z = length(z_descriptors);
     if(N_z < N)
-    	descriptors = z_descriptors;
+        descriptors = z_descriptors;
         descriptors(N_z+1:N) = zeros(1,N-N_z);
-   	else
-   		descriptors = z_descriptors(1:N);
+    else
+        descriptors = z_descriptors(1:N);
     end
 end

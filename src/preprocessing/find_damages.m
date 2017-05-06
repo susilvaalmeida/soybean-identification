@@ -40,5 +40,3 @@ function output_img = remove_background(img)
 
     output_img = 1 - output_img;
 end
-
-	
