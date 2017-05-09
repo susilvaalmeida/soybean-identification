@@ -24,7 +24,6 @@ function preprocess_leaflets(input_folder)
     mkdir('../../data/cuts');
     
     for i = 1:N
-        i
         img = imread([input_folder images(i).name]);
 
         %filter image and find damages
