@@ -10,7 +10,7 @@
 function output_img = remove_shadows(img)
     hsv = rgb2hsv(img);
     hue = hsv(:,:,1);   
-    hue_bw = im2bw(hue,0.3);
+    hue_bw = imbinarize(hue,0.3);
     output_img = rgb2gray(img);
     output_img = (im2double(output_img)+double(hue_bw));
 end

@@ -15,9 +15,10 @@
 function output_img = filter_noise(img)
     img_gray = remove_shadows(img);
     level = graythresh(img_gray);
-    bw = im2bw(img_gray,level);
-    
+    bw = imbinarize(img_gray,level);
+    output_img = img;
     img_temp = 1-bw;
+    
     [labels,num] = bwlabel(img_temp);
 
     %find largest region
@@ -29,7 +30,7 @@ function output_img = filter_noise(img)
         end
     end
 
-    output_img = img;
+    
     N = size(output_img);
      for i = 1:(N(1))
          for j = 1:(N(2))

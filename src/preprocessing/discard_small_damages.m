@@ -19,7 +19,7 @@ function output_img = discard_small_damages(bw_img)
         perc = length(find(labels == i))/total_size;
         
         if(perc < 0.0002)
-            output_img(labels==i) = 255;
+            output_img(labels==i) = 1;
         end
     end   
 end 
