@@ -8,7 +8,7 @@ Many of the difficulties in managing soybean tillage are related to the identifi
 ## Image Preprocessing
 The image preprocessing has two steps: image filtering and contour extraction. The figures below show the labeled image and the results of these two steps.
 
-![Preprocessing](readme_images/preprocessing.png)
+![Preprocessing](preprocessing.png)
 
 ## Feature Extraction
 
