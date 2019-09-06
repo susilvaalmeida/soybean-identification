@@ -1,6 +1,6 @@
 # Analysis of Descriptors for Automatic Classification of Damaging Agents in Brazilian Soybean Leaflets
 
-This repository contains the code (Matlab) and the data created for my undergraduate thesis in **2011**.
+This repository contains the some parts of the code (Matlab) and the data created for my undergraduate thesis in **2011**.
 
 ## Introduction
 Many of the difficulties in managing soybean tillage are related to the identification of insect/pests harmful to the plant since tillage can be attacked by a wide range of such agents. By identifying the most common agents that cause damages to the leaflets, we can obtain more knowledge about appropriate strategies of control. This project presents a method for classification of the main agents that cause damages to soybean leaflets, i.e., beetles and caterpillars.
